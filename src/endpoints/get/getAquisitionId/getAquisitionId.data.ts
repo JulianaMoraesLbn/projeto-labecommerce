@@ -9,20 +9,18 @@ export class getAquisitionIdData extends connectionDataBase {
         try{
             //console.log('id', user_id.user_id) está chegando como objeto, não consegui desestruturar
 
-           const result = getAquisitionIdData.connection.raw(`SELECT * FROM table_labecommerce_users INNER JOIN table_labecommerce_aquisition ON table_labecommerce_users.id = table_labecommerce_aquisition.user_id WHERE table_labecommerce_users.id = "${user_id.user_id}"`)
+           const result = await getAquisitionIdData.connection.raw(`SELECT * FROM table_labecommerce_users INNER JOIN table_labecommerce_aquisition ON table_labecommerce_users.id = table_labecommerce_aquisition.user_id WHERE table_labecommerce_users.id = "${user_id.user_id}"`)
 
-            //const result = getAquisitionIdData.connection().select('*').table('table_labecommerce_users').innerJoin('table_labecommerce_aquisition', 'table_labecommerce_aquisition.user_id', 'table_labecommerce_users.id').where('user_id', "001") 
+            //não deu certo //const result = await getAquisitionIdData.connection().select('*').table('table_labecommerce_users').innerJoin('table_labecommerce_aquisition', 'table_labecommerce_aquisition.user_id', 'table_labecommerce_users.id').where('user_id', `"${user_id.user_id}"`) 
 
-             //const result = getAquisitionIdData.connection().select('*').from('table_labecommerce_users').innerJoin('table_labecommerce_aquisition', 'users.id', '=', 'table_labecommerce_aquisition.user_id')
-             
+            //não deu certo //const result = await getAquisitionIdData.connection().select('*').from('table_labecommerce_users').innerJoin('table_labecommerce_aquisition', 'users.id', '=', 'table_labecommerce_aquisition.user_id').where('id',`"${user_id.user_id}"`) 
             
-             console.log('result', result)
-
+            console.table(result[0])
             if(!result){
                 throw new MissingInformation
             }
 
-            //return result
+            return result[0]
 
 
         }catch(err: any){
