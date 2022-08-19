@@ -1,7 +1,10 @@
 # projeto-labecommerce
 
 ## O projeto
-Este projeto que como objetivo exercítar a criação de endpoints, conexão com banco de dados e arquitetura em 3 camadas. 
+Este projeto que como objetivo exercítar a 
+- criação de endpoints, 
+- conexão com banco de dados e 
+- arquitetura em 3 camadas
 
 ## Principais tecnologias utilizadas?
 - Typescript
