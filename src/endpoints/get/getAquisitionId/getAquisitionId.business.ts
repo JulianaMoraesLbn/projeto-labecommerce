@@ -5,6 +5,6 @@ export class NewAquisitionIdBusiness {
     public getAquisitionId = async (user_id: getAquisitionIdDTO) => {
 
         const aquisitionIdData = new getAquisitionIdData()
-        aquisitionIdData.getAquisitionId(user_id)
+        return await aquisitionIdData.getAquisitionId(user_id)
     }
 }

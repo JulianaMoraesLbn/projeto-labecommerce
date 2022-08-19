@@ -4,7 +4,6 @@ export class GetUserBusiness {
     public getUser = async () => {
 
         const newGetUserData = new GetUserData()
-        newGetUserData.getUsers()
-
+        return await newGetUserData.getUsers()
     }
 }

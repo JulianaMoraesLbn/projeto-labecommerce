@@ -21,9 +21,9 @@ export class NewAquisitionIdController {
             }
 
             const aquisitionIdBusiness = new NewAquisitionIdBusiness()
-            aquisitionIdBusiness.getAquisitionId(input)
+            const result = await aquisitionIdBusiness.getAquisitionId(input)
 
-            res.sendStatus(201)
+            res.status(200).send(result)
         }
         catch (err: any) {
             res.status(err.statusCode).send(err.message)

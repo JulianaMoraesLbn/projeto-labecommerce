@@ -25,9 +25,9 @@ export class GetProductController {
             }
 
             const allProductBusiness = new GetProductBusiness()
-            allProductBusiness.getProducts(inputData)
+            const result = await allProductBusiness.getProducts(inputData)
 
-            res.status(200).send('ok')
+            res.status(200).send(result)
 
         }
         

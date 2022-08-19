@@ -5,7 +5,7 @@ import { getProductDTO } from '../../../model/types'
 
 export class GetProductData extends connectionDataBase {
 
-    public allProductData = async (inputData: getProductDTO) => {
+    public allProductData = async (inputData: getProductDTO):Promise<{}> => {
 
         try {
 
@@ -18,7 +18,7 @@ export class GetProductData extends connectionDataBase {
 
             if (!result) { throw new MissingInformation }
           
-            console.log('product', result)
+            return result
 
         } catch (err: any) {
             throw new DataBaseErr(err.sqlMessage)

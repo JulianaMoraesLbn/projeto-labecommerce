@@ -4,18 +4,16 @@ import { Response } from 'express'
 
 export class GetUserData extends connectionDataBase{
 
-    public getUsers = async (): Promise<void> => {
-
-        try {
-
-            const testeResult = await GetUserData.connection()
+    public getUsers = async ():Promise<{}> => {
+        
+    try {
+            const result = await GetUserData.connection()
                 .select("*")
                 .from("table_labecommerce_users")
     
-            //if (!result) { throw new MissingInformation }    
+            if (!result) { throw new MissingInformation }    
 
-            console.log(testeResult)
-        
+            return result
         }
         catch (err: any) {
             throw new DataBaseErr(err.sqlMessage)
