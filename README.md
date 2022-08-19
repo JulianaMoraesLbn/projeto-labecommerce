@@ -4,9 +4,9 @@
 Este projeto que como objetivo exercítar a criação de endpoints, conexão com banco de dados e arquitetura em 3 camadas. 
 
 ## Principais tecnologias utilizadas?
-Typescript
-Knex
-mysql
+- Typescript
+- Knex
+- Mysql
 
 ## O que ele faz?
 Cadastro de usuário, produtos e compras 
