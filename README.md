@@ -1,9 +1,9 @@
 # projeto-labecommerce
 
 ## O projeto
-Este projeto que como objetivo exercítar a 
-- criação de endpoints, 
-- conexão com banco de dados e 
+Este projeto que como objetivo exercítar:
+- criação de endpoints
+- conexão com banco de dados 
 - arquitetura em 3 camadas
 
 ## Principais tecnologias utilizadas?
