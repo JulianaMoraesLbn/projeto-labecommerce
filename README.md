@@ -4,7 +4,7 @@
 Este projeto que como objetivo exercítar:
 - criação de endpoints
 - conexão com banco de dados 
-- arquitetura em 3 camadas
+- arquitetura em 3 camadas (controller, business e data)
 
 ## Principais tecnologias utilizadas?
 - Typescript
